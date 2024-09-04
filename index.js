@@ -6,7 +6,7 @@ const connectDB=async()=>{
     mongoose.connect('mongodb://localhost:27017/e-commerce')
     const UserSchema=new mongoose.Schema({});
     const User=mongoose.model('User',UserSchema)
-    const data=await users.find();
+    const data=await User.find();
     console.warn(data);
 }
 connectDB();
